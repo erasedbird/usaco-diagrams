@@ -1,0 +1,45 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  color:#70163C;
+  background-color:#EEF0F2;
+}
+
+h{
+  font-family: 'Lato', sans-serif;
+}
+
+h2{
+  color:#2E0F15;
+}
+
+/*header*/
+#header{
+  /*width: 100%;*/
+  text-align: center;
+  padding: 3%;
+  margin:0%;
+  background-image: linear-gradient(#70163C, #120309);
+  /*background-color:#392F5A;*/
+  color:white;
+}
+
+.bodyCont{
+  margin-left:10%;
+  margin-right:10%;
+  margin-top:5%;
+  margin-bottom: 5%;
+  padding: 2.5em;
+  background-color:white;
+}
+
+ul {
+  list-style-type: square;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
