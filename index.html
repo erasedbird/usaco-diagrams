@@ -5,38 +5,48 @@
     <meta name="viewport" content="width=device-width">
     <title>USACO Diagrams</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1> USACO Diagrams </h1>
-    <p>For the visual learners frustrated with the lack of helpful diagrams on USACO solutions. This site is intended to be used as a supplement to the official solutions and will not directly explain how to solve the problems, just provide diagrams that show how the official solution works.</p>
-    <br>
-    <a href = "#res">Other Helpful Resources</a>
-    <h2>List of Past Problems</h2>
-    <ul>
-      <li><a href = "#2012J1">2012 January, Silver 1. Delivery Route</a></li>
-    </ul>
+    <div id = "header">
+      <h1> USACO Diagrams </h1>
+      <p>For the visual learners frustrated with the lack of helpful diagrams on USACO solutions. This site is intended to be used as a supplement to the official solutions and will not directly explain how to solve the problems, just provide diagrams that show how the official solution works.</p>
+    </div>
 
-    <h2 id = "2012J1">2012 January, Silver 1. Delivery Route</h2>
-    <a href = "http://www.usaco.org/index.php?page=viewproblem2&cpid=106">Official Problem</a><br>
-    <a href = "http://www.usaco.org/current/data/sol_delivery.html">Official Solution</a>
-    <p>
-      This problem is best represented by a graph. The official solutions says to use a set (to prevent repeats) to store every single coordinate that represents a barn, as well as the 4 adjacent nodes. I have represented that below, with black dots as barns and red Xs as adjacent coordinates, also nodes.
-    </p>
-    <img src = "diagrams/S2012J11.png">
-    <p>
-      Now, we want to connect these nodes. We will connect 2 nodes if there exists a path between them that changes direction at most once AND does not cross any farms. The distance traveled between those 2 nodes (Manhattan Distance) will be the weight of the edge. This distance will be the shortest distance between any 2 nodes if we only move vertically and horizontally. The edges are drawn below, with a weight shown as an example.
-    </p>
-    <img src = "diagrams/S2012J12.png">
-    <p>
-       Now, Dijkstra's shortest path algorithm can be run on every single barn to find the shortest path between itself and the next barn. Make sure to avoid visiting any barns in between though.<br>
-       If the shortest possible path between 2 barns is blocked by anotehr barn, we can use one of the adjacent coordinates of the blocking barn to try to the connect the 2 barns. I have highlighted the direct shortest path between 6 and 7 in green, as well as the indirect path between 2 and 3 in purple to show how the adjacent node to 4 is used to connect 2 and 3. This logic can be applied for even more complex paths as well.
-    </p>
-    <img src = "diagrams/S2012J13.png">
-    <p>
-      For more specifics, like complexity and code, go to the official solution. This is merely intended to be used as a supplement to make the official solution make more sense.
-    </p>
-    <h2 id="res">Other helpful resources</h2>
-    <a href = "https://www.youtube.com/channel/UCzDJwLWoYCUQowF_nG3m5OQ"> Simple explanations of many graph algorithms used in Gold </a>
-    <a href = "https://www.youtube.com/c/Cararra/featured"> Explanations of past USACO Silver problems </a>
+    <div class = "bodyCont">
+      <h2>List of Past Problems</h2>
+      <ul>
+        <li><a href = "#2012J1">2012 January, Silver 1. Delivery Route</a></li>
+        <li><a href = "#res">Other Helpful Resources</a></li>
+      </ul>
+    </div>
+
+    <div class = "bodyCont">
+      <h2 id = "2012J1">2012 January, Silver 1. Delivery Route</h2>
+      <a href = "http://www.usaco.org/index.php?page=viewproblem2&cpid=106">Official Problem</a><br>
+      <a href = "http://www.usaco.org/current/data/sol_delivery.html">Official Solution</a>
+      <p>
+        This problem is best represented by a graph. The official solutions says to use a set (to prevent repeats) to store every single coordinate that represents a barn, as well as the 4 adjacent nodes. I have represented that below, with black dots as barns and red Xs as adjacent coordinates, also nodes.
+      </p>
+      <img src = "diagrams/S2012J11.png">
+      <p>
+        Now, we want to connect these nodes. We will connect 2 nodes if there exists a path between them that changes direction at most once AND does not cross any farms. The distance traveled between those 2 nodes (Manhattan Distance) will be the weight of the edge. This distance will be the shortest distance between any 2 nodes if we only move vertically and horizontally. The edges are drawn below, with a weight shown as an example.
+      </p>
+      <img src = "diagrams/S2012J12.png">
+      <p>
+        Now, Dijkstra's shortest path algorithm can be run on every single barn to find the shortest path between itself and the next barn. Make sure to avoid visiting any barns in between though.<br>
+        If the shortest possible path between 2 barns is blocked by anotehr barn, we can use one of the adjacent coordinates of the blocking barn to try to the connect the 2 barns. I have highlighted the direct shortest path between 6 and 7 in green, as well as the indirect path between 2 and 3 in purple to show how the adjacent node to 4 is used to connect 2 and 3. This logic can be applied for even more complex paths as well.
+      </p>
+      <img src = "diagrams/S2012J13.png">
+      <p>
+        For more specifics, like complexity and code, go to the official solution. This is merely intended to be used as a supplement to make the official solution make more sense.
+      </p>
+    </div>
+
+    <div class = "bodyCont">
+      <h2 id="res">Other helpful resources</h2>
+      <a href = "https://www.youtube.com/channel/UCzDJwLWoYCUQowF_nG3m5OQ"> Simple explanations of many graph algorithms used in Gold </a> <br>
+      <a href = "https://www.youtube.com/c/Cararra/featured"> Explanations of past USACO Silver problems </a>
+    </div>
   </body>
 </html>
